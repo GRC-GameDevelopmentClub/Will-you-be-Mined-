@@ -17,6 +17,8 @@ public class EnemyBehavior : MonoBehaviour {
     private bool notAtEdge;
     public Transform edgeCheck;
 
+    public float enemyHealth;
+
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody2D>();
@@ -45,7 +47,10 @@ public class EnemyBehavior : MonoBehaviour {
             rb.velocity = new Vector2(-moveSpeed, 0);
         }
 
-
+        if(enemyHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
 
 	}
 
