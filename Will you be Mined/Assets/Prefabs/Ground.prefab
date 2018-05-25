@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4615882596730330}
   - component: {fileID: 212488657436708828}
   - component: {fileID: 61364833370693772}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4936044742701344}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground
   m_TagString: Ground
   m_Icon: {fileID: 0}
