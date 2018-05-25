@@ -6,11 +6,13 @@ public class PlayerBehavior : MonoBehaviour {
 
 
     public float moveSpeed;
-    public float jumpHeight;
 
-    public bool onGround;
 
     private Rigidbody2D rb;
+
+    public float playerHealth;
+
+    public GameObject attackObject;
 
 
 	// Use this for initialization
@@ -39,9 +41,22 @@ public class PlayerBehavior : MonoBehaviour {
             rb.velocity = new Vector2(0, 0);
         }
 
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            rb.velocity = new Vector2(0, jumpHeight);
+            attackObject.SetActive(true);
+        }
+
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            attackObject.SetActive(false);
+        }
+
+
+        
+
+        if(playerHealth <= 0)
+        {
+            Debug.Log("You Died!");
         }
     }
 
