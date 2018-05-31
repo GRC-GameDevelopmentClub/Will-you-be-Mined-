@@ -14,10 +14,18 @@ public class PlayerBehavior : MonoBehaviour {
 
     public GameObject attackObject;
 
+    public GameObject deathScreen;
 
-	// Use this for initialization
-	void Start () {
+    public GameObject heartOne;
+    public GameObject heartTwo;
+    public GameObject heartThree;
+
+
+
+    // Use this for initialization
+    void Start () {
         rb = GetComponent<Rigidbody2D>();
+        deathScreen.SetActive(false);
 	}
 
     // Update is called once per frame
@@ -51,12 +59,22 @@ public class PlayerBehavior : MonoBehaviour {
             attackObject.SetActive(false);
         }
 
-
-        
-
-        if(playerHealth <= 0)
+        if(playerHealth == 2)
         {
+            heartOne.SetActive(false);
+        }
+
+        if (playerHealth == 1)
+        {
+            heartTwo.SetActive(false);
+        }
+
+
+        if (playerHealth <= 0)
+        {
+            heartThree.SetActive(false);
             Debug.Log("You Died!");
+            deathScreen.SetActive(true);
         }
     }
 
