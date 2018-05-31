@@ -197,8 +197,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  playerHealth: 10
+  playerHealth: 3
   attackObject: {fileID: 1800293539819088}
+  deathScreen: {fileID: 0}
+  heartOne: {fileID: 0}
+  heartTwo: {fileID: 0}
+  heartThree: {fileID: 0}
 --- !u!212 &212082027313494404
 SpriteRenderer:
   m_ObjectHideFlags: 1

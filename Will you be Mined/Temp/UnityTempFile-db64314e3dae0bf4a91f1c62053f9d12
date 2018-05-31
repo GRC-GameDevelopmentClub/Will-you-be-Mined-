@@ -177,7 +177,9 @@
 -define:ENABLE_UNITY_COLLECTIONS_CHECKS
 -define:UNITY_TEAM_LICENSE
 -define:ENABLE_VSTU
+Assets/Scripts/EnemyAttack.cs
 Assets/Scripts/EnemyBehavior.cs
 Assets/Scripts/PlayerAttack.cs
 Assets/Scripts/PlayerBehavior.cs
+Assets/Scripts/UserInterface.cs
 -lib:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity"
