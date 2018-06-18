@@ -33,6 +33,7 @@ public class PlayerBehavior : MonoBehaviour {
     {
         if (Input.GetKey(KeyCode.D))
         {
+            transform.localScale = new Vector3(1f, 1f, 1f);
             rb.velocity = new Vector2(moveSpeed, 0);
         }
         else if (Input.GetKeyUp(KeyCode.D))
@@ -42,6 +43,7 @@ public class PlayerBehavior : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.A))
         {
+            transform.localScale = new Vector3(-1f, 1f, 1f);
             rb.velocity = new Vector2(-moveSpeed, 0);
         }
         else if (Input.GetKeyUp(KeyCode.A))

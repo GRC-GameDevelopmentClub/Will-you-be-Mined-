@@ -17,6 +17,7 @@ public class EnemyBehavior : MonoBehaviour {
     private bool notAtEdge;
     public Transform edgeCheck;
 
+
     public float enemyHealth;
 
 	// Use this for initialization
@@ -29,6 +30,7 @@ public class EnemyBehavior : MonoBehaviour {
 
         hittingWall = Physics2D.OverlapCircle(wallCheck.position, wallCheckRadius, whatIsWall);
 
+
         notAtEdge = Physics2D.OverlapCircle(edgeCheck.position, wallCheckRadius, whatIsWall);
 
         if (hittingWall || !notAtEdge)
@@ -38,12 +40,12 @@ public class EnemyBehavior : MonoBehaviour {
 
         if (moveRight)
         {
-            transform.localScale = new Vector3(-4.5f, 4.5f, 4.5f);
+            transform.localScale = new Vector3(-3f, 3f, 3f);
             rb.velocity = new Vector2(moveSpeed, 0);
         }
         else
         {
-            transform.localScale = new Vector3(4.5f, 4.5f, 4.5f);
+            transform.localScale = new Vector3(3, 3, 3);
             rb.velocity = new Vector2(-moveSpeed, 0);
         }
 
